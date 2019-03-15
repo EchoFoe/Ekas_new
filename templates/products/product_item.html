@@ -1,0 +1,44 @@
+{% block content %}
+{% load static %}
+
+
+
+<div class="col-lg-6">
+    <div class="row no-gutters align-items-stretch h-100 half-sm">
+
+        <div class="col-md-6 bg-image bg-sm-height" style="background-image: url({{ product_image.image.url }});" data-aos="fade" data-aos-delay="0">
+        </div>
+        <div class="col-md-6 bg-light text">
+            <div class="p-4">
+                <h2 class="h5 mb-3 text-black line-height-sm">{{ product_image.Product.name }}</h2>
+                <p>{{ product_image.Product.description|truncatechars_html:120 }}</p>
+                <p id="Product.id" class="mb-0"><a href="{% url 'product' product_image.Product.id %}" class=""><small class="text-uppercase font-weight-bold text-black">Подробнее</small></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{#    <div class="col-lg-3 tilt2">#}
+{#        <div class="product-item text-center">#}
+{#            <div class="">#}
+{#                <h4>{{ product_image.Product.name }}</h4>#}
+{#                <a href="{% url 'product' product_image.Product.id %}">#}
+{#                    <img src="{{ product_image.image.url }}" class="img-responsive">#}
+{#                </a>#}
+{#            </div>#}
+{##}
+{#            <hr>#}
+{#                <p><strong>{{ product_image.Product.description|truncatechars_html:120 }}</strong></p>#}
+{#        <form id="Product.id" action="{% url 'product' product_image.Product.id %}">#}
+{#            <div class="add-to-cart-btn">#}
+{#                <button class="btn btn-primary tilt">#}
+{#                    Подробнее#}
+{#                </button>#}
+{#            </div>#}
+{#        </form>#}
+{#        </div>#}
+{#    </div>#}
+
+{% endblock %}

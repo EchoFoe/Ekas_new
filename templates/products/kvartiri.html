@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="site-wrap">
+    <div class="site-blocks-cover inner-page overlay" style="background-image: url(../../static/images/nedvizhimost_ekas_org_1.png);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 text-center">
+            <h1 class="mb-5"><strong>ЖИЛЬЁ</strong></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="site-section">
+
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-12 text-center">
+            <h2 class="font-weight-light text-black display-4">Предлагаем Вашему вниманию <strong>недвижимость</strong> в многоквартирном жилом доме, расположенном по адресу:</h2>
+          </div>
+            <div class="col-12 text-center">
+            <h2 class="font-weight-light text-black display-4">Курская область, Мантуровский р-н, с. Сейм, ул. Школьная, д.7</h2>
+            </div>
+          <div class="col-md-7 text-center">
+          </div>
+        </div>
+    <form class="dl-horizontal form-group row no-gutters align-items-stretch h-100">
+        {% for  product_image in products_images_1  %}
+            {% include 'products/product_item.html' %}
+        {% endfor %}
+    <br>
+    </form>
+    <form class="dl-horizontal form-group row no-gutters align-items-stretch h-100">
+        {% for  product_image in products_images_2  %}
+            {% include 'products/product_item.html' %}
+        {% endfor %}
+    <br>
+    </form>
+    </div>
+
+</div>
+
+{#<div id="apartments">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <br>#}
+{#            <h1 class="text-center">Предлагаем Вашему вниманию <strong>недвижимость</strong> в многоквартирном жилом доме,#}
+{#                расположенном по адресу:</h1>#}
+{#                <h2><strong>Курская область, Мантуровский р-н, с. Сейм, ул. Школьная, д.7</strong></h2>#}
+{#                <br>#}
+{#                <p class="tilt2">#}
+{#                    <br><br>#}
+{#                    <img src="{% static 'img/1etazh_chb.jpg' %}" alt="...">#}
+{#                </p>#}
+{#                <hr>#}
+{#                <p class="tilt2">#}
+{#                    <br><br>#}
+{#                    <img src="{% static 'img/2etazh_cb.jpg' %}" alt="...">#}
+{#                </p>#}
+{#                <hr>#}
+{#                <p class="tilt2">#}
+{#                    <br><br>#}
+{#                    <img src="{% static 'img/3etazh_chb.jpg' %}" alt="...">#}
+{#                </p>#}
+{#                <hr>#}
+{#                <h2 class="text-center">Вы можете ознакомиться с планировкой дома и квартир в нем.</h2>#}
+{#                <h2 class="text-center">Так же представлены экспликации для каждой из квартир.</h2>#}
+    {#            <p class="text-center"><strong>Ниже представлены квартиры</strong></p>#}
+{#            <h2><i class="fa fa-envelope-o" aria-hidden="true"></i> По всем вопросам и предложениям, связанными с недвижимостью,#}
+{#                пожалуйста, высылайте на электронный адрес:</h2>#}
+{#                <br>#}
+{#                <h2 class="tilt1 text-center">ekas_group@mail.ru</h2>#}
+{#                <br>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{##}
+{#    <div class="panel-group" id="col1">#}
+{#        <div class="panel panel-default">#}
+{#            <div class="panel-heading">#}
+{#                <h1 class="text-center">#}
+{#                    <a data-toggle="collapse" data-parent="#col1" href="#collapse4" title="Нажмите, чтобы раскрыть/скрыть список">#}
+{#                        Двухкомнатные квартиры:</a>#}
+{#                </h1>#}
+{#            </div>#}
+{#            <div id="collapse4" class="panel-collapse collapse in">#}
+{#                <div class="panel-body">#}
+{#                    <div class="section_apartment2">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                                <div class="">#}
+{#                                    {% for  product_image in products_images_1  %}#}
+{#                                        {% include 'Subscribers/product_item.html' %}#}
+{#                                    {% endfor %}#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#    <br>#}
+{#    <div class="panel-group" id="col2">#}
+{#        <div class="panel panel-default">#}
+{#            <div class="panel-heading">#}
+{#                <h1 class="text-center">#}
+{#                    <a data-toggle="collapse" data-parent="#col2" href="#collapse5" title="Нажмите, чтобы раскрыть/скрыть список">#}
+{#                        Трехкомнатные квартиры:</a>#}
+{#                </h1>#}
+{#            </div>#}
+{#            <div id="collapse5" class="panel-collapse collapse in">#}
+{#                <div class="panel-body">#}
+{#                    <div class="section_apartment3">#}
+{#                        <div class="container">#}
+{#                            <div class="row">#}
+{#                            {% for  product_image in  products_images_2  %}#}
+{#                                {% include 'Subscribers/product_item.html' %}#}
+{#                            {% endfor %}#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+
+
+{% endblock %}

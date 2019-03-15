@@ -1,0 +1,117 @@
+{% load static %}
+
+<div class="promo py-5 bg-primary" data-aos="fade">
+    <div class="container text-center">
+        <h2 class="d-block mb-0 font-weight-light text-white d-block">Задайте нам любой вопрос и мы с радостью Вам ответим на него</h2>
+    </div>
+</div>
+
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-8 mb-5">
+                <form action="#" method="post" class="p-5 bg-white">{% csrf_token %}
+                    <div class="row form-group">
+                        <div class="col-md-12 mb-3 mb-md-0">
+                            <label class="font-weight-bold" for="fullname">Ваше имя</label>
+                            <input type="text" name="{{ form.name.name }}" value="{{ request.POST.name }}" id="fullname" class="form-control" placeholder="Введите Ваше имя">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="font-weight-bold" for="email">Email</label>
+                            <input type="email" name="{{ form.email.name }}" value="{{ request.POST.email }}" id="email" class="form-control" placeholder="Введите Ваш email">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="font-weight-bold" for="message">Сообщение</label>
+                            <textarea name="{{ form.message.name }}" value="{{ request.POST.message }}" id="message" cols="30" rows="5" class="form-control" placeholder="Введите сообщение"></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <input type="submit" value="ОТПРАВИТЬ" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="p-4 mb-3 bg-white">
+                    <h3 class="h5 text-black mb-3">Контактная информация</h3>
+                    <p class="mb-0 font-weight-bold">Адрес</p>
+                    <p class="mb-4">Карла Маркса, 23, г. Курск, РФ</p>
+                    <p class="mb-0 font-weight-bold">Телефон для связи</p>
+                    <p class="mb-4"><a href="#">(4712) 536-544</a></p>
+                    <p class="mb-0 font-weight-bold">Email</p>
+                    <p class="mb-0"><a href="#">ekas_group@mail.ru</a></p>
+                </div>
+                <div class="p-4 mb-3 bg-white">
+                    <h3 class="h5 text-black mb-3">Немного дополнительной информации</h3>
+                    <p>Компания создана в 1998 г. На протяжении 20+ лет группа компаний «ЭКАС» благодаря технической надежности, первоклассному инжинирингу, внедрению новых технологий и разветвленной сети сервисного обслуживания успешно работает на объектах различных сфер деятельности</p>
+                    <p><a href="{% url 'about_us' %}" class="btn btn-primary px-4 py-2 text-white">Подробнее</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
+                        <h3 class="footer-heading mb-4">Группа компаний ЭКАС |</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'kotli' %}">Производство котлов ЭКАС</a></li>
+                            <li><a href="{% url 'bmk' %}">Производство блочно-модульных котельных</a></li>
+                            <li><a href="{% url 'proektirovanie' %}">Проектирование и строительство объектов капитального строительства, линейных сооружений</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'epb' %}">Экспертиза промышленной безопасности</a></li>
+                            <li><a href="{% url 'asu' %}">Пусконаладочные работы</a></li>
+                            <li><a href="{% url 'kvartiri' %}">Недвижимость</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-4 mb-5 mb-lg-0">
+                        <h3 class="footer-heading mb-4">Наш блог |</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'news' %}">Новости</a></li>
+                            <li><a href="{% url 'about_us' %}">О компании</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="row mb-5">
+                    <div class="col-md-12"><h3 class="footer-heading mb-4">Месторасположение |</h3></div>
+                    <div class="col-md-6">
+                        <p>Российская Федерация, Курская обл., г. Курск <br> ул. Карла Маркса, д.23</p>
+                    </div>
+                    <div class="col-md-6">
+                        Тел.: <strong>(4712) 536-544</strong> <br>
+                        Почта: <strong>ekas_group@mail.ru</strong> <br>
+                        Почтовый индекс: 305004
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"><h3 class="footer-heading mb-4">Структура компании |</h3></div>
+                    <div class="col-md-12">
+                        <p>ООО "ЭКАС-Строймонтаж"</p>
+                        <p>ООО "ЭКАС-Оргпищепром+"</p>
+                        <p>ООО "ЭКАС-Комплект"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+                <p>Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | Made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="http://echorise.ru/" target="_blank" >web-studio Echorise</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

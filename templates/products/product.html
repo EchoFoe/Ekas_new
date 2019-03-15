@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+            {% for image_item in products.productimage_set.all %}
+              <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url({{ image_item.image.url }});" data-aos="fade-up"></div>
+            {% endfor %}
+          <div class="col-md-6 pr-md-5 order-md-1">
+            <h2 class="display-3 line-height-xs text-black mb-4"> <strong>{{ products.name }} |</strong></h2>
+            <p class="mb-4">{{ products.description }}</p>
+              <p>
+                  По всем вопросам и предложениям, связанными с недвижимостью, пожалуйста, обращайтесь по электронномму адресу или по телефону:
+              </p>
+            <ul class="site-block-check">
+              <li><strong>ekas_group@mail.ru</strong></li>
+                <li><strong>+7 919 279 63-04</strong></li>
+            </ul>
+            <p>Вы можете ознакомиться с планировкой дома и квартир в нем</p>
+            <p>Так же представлены экспликации для каждой из квартир</p>
+              <p>Вы всегда можете заполнить форму ниже и оставить заявку для получения дополнительной информации</p>
+              <p>С Вами обязательно свяжется наш сотрудник</p>
+              <p><br><br><br><br><br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+{#    <div class="container-product">#}
+{#        <div class="row">#}
+{#            <div class="col-lg-6">#}
+{#                {% for image_item in products.productimage_set.all %}#}
+{#                    <div class="product-image-item">#}
+{#                        <img src="{{ image_item.image.url }}" class="img-responsive">#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#            <div class="col-lg-6">#}
+{#                <h1 class="text-center">#}
+{#                    {{ products.name }}#}
+{#                </h1>#}
+{#                    <div>#}
+{#                        <ul class="nav nav-tabs" role="tablist">#}
+{#                            <li role="presentation" class="active">#}
+{#                                <a href="#description" aria-controls="home" role="tab" data-toggle="tab">#}
+{#                                    Описание#}
+{#                                </a>#}
+{#                            </li>#}
+{#                            <li role="presentation">#}
+{#                                <a href="#delivery" aria-controls="profile" role="tab" data-toggle="tab">#}
+{#                                    Доставка#}
+{#                                </a>#}
+{#                            </li>#}
+{#                        <li role="presentation">#}
+{#                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">#}
+{#                            Как с нами связаться?</a></li>#}
+{#                        <li role="presentation">#}
+{#                            <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">#}
+{#                                Выгодные условия</a></li>#}
+{#                        </ul>#}
+{#                        <div class="tab-content product-description-tabs">#}
+{#                            <div role="tabpanel" class="tab-pane active" id="description">#}
+{#                                <h2>#}
+{#                                    {{ products.description }}#}
+{#                                </h2>#}
+{#                                <hr>#}
+{#                            </div>#}
+{#                            <div role="tabpanel" class="tab-pane" id="delivery">#}
+{#                                <h3>Доставка по всей территории РФ</h3>#}
+{#                            </div>#}
+{#                            <div role="tabpanel" class="tab-pane" id="messages">#}
+{#                                <h2><i class="fa fa-envelope-o" aria-hidden="true"></i> По всем вопросам и предложениям,#}
+{#                                    связанными с недвижимостью, пожалуйста, обращайтесь по#}
+{#                                    электронномму адресу или по телефону:</h2>#}
+{#                                <hr>#}
+{#                                <h2 class="tilt1 text-center">ekas_group@mail.ru</h2>#}
+{#                                <hr>#}
+{#                                <h2 class="tilt1 text-center">+7 919 279 63-04</h2>#}
+{#                                <hr>#}
+{#                                <h2 class="text-center">С Вами обязательно свяжется наш сотрудник</h2>#}
+{#                            </div>#}
+{#                            <div role="tabpanel" class="tab-pane" id="settings">#}
+{#                                <h2 class="text-center">Окончание ремонтно-строительных работ в IV квартале 2018 года</h2>#}
+{#                                <hr>#}
+{#                                <h2 class="text-center">При заключении договора купли-продажи в III#}
+{#                                квартале 2018 года и внесении предоплаты в размере не менее 20% от полной суммы</h2>#}
+{#                                <hr>#}
+{#                                <h2 class="text-center">Возможна свободная планировка и продажа без отделки</h2>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                <div>#}
+{#                        <form id="form_buying_product" class="form-inline" action="{% url 'kvartiri' %}">{% csrf_token %}#}
+{#                            <div class="form-group">#}
+{#                               <input type="number" class="form-control" name="number" id="number">#}
+{#                            </div>#}
+{#                            <div class="form-group">#}
+{#                               <button type="submit" id="submit_btn" class="btn btn-success btn-buy"#}
+{#                                       data-product.id = "{{ products.id }}"#}
+{#                                       data-product.name = "{{ products.name }}"#}
+{#                                       data-product.price = "{{ products.price }}"#}
+{#                               > Купить#}
+{#                                </button>#}
+{#                            </div>#}
+{#                        </form>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{% endblock %}

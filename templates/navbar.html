@@ -1,0 +1,77 @@
+{% load static %}
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <div class="site-navbar-wrap bg-white">
+      <div class="site-navbar-top">
+        <div class="container py-2">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <a href="#" class="p-2 pl-0"><span class="icon-facebook"></span></a>
+              <a href="#" class="p-2 pl-0"><span class="icon-vk"></span></a>
+              <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
+            </div>
+            <div class="col-6">
+              <div class="d-flex ml-auto">
+                <a href="#" class="d-flex align-items-center ml-auto mr-4">
+                  <span class="icon-phone mr-2"></span>
+                  <span class="d-none d-md-inline-block">(4712) 536-544</span>
+                </a>
+                <a href="#" class="d-flex align-items-center">
+                  <span class="icon-envelope mr-2"></span>
+                  <span class="d-none d-md-inline-block">ekas_group@mail.ru</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-navbar bg-light">
+        <div class="container py-1">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <h2 class="mb-0 site-logo"><a href="{% url 'home' %}">ЭКАС</a></h2>
+            </div>
+            <div class="col-10">
+              <nav class="site-navigation text-right" role="navigation">
+                <div class="container">
+                  <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
+                    <li class="has-children active">
+                      <a href="#">Группа компаний ЭКАС</a>
+                      <ul class="dropdown arrow-top">
+                        <li><a href="{% url 'proektirovanie' %}">Проектирование и строительство</a></li>
+                        <li><a href="{% url 'epb' %}">Экспертиза промышленной безопасности</a></li>
+                        <li><a href="{% url 'asu' %}">Пусконаладочные работы</a></li>
+                        <li class="has-children">
+                          <a href="#">Котлы и котельные</a>
+                          <ul class="dropdown">
+                            <li><a href="{% url 'kotli' %}">Производство котлов ЭКАС</a></li>
+                            <li><a href="{% url 'bmk' %}">Производство блочно-модульных котельных</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="{% url 'kvartiri' %}">Недвижимость</a></li>
+                    <li><a href="{% url 'news' %}">Новости</a></li>
+                    <li><a href="{% url 'about_us' %}">О компании</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="{% static "js/main.js" %}"></script>
